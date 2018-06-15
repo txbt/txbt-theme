@@ -1,0 +1,16 @@
+$btn-primary-color:              #333;
+$btn-primary-bg:                 #F8E71C;
+$btn-primary-border:             #666;
+
+.btn-theme {
+  color: $btn-primary-color;
+  background: $btn-primary-bg;
+  border: $btn-primary-border;
+  transition: background .75s ease-in-out;
+  text-transform: uppercase;
+
+  &:hover {
+    background: darken( $btn-primary-bg, 15%)
+  }
+
+}

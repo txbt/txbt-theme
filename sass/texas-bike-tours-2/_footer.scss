@@ -1,0 +1,15 @@
+footer {
+	font-weight:300;
+	font-size:85%;
+	a {
+		color: $white;
+
+		&:hover {
+			color: $gray-300;
+		}
+	}
+
+	.copyright {
+		font-weight:300;
+	}
+}

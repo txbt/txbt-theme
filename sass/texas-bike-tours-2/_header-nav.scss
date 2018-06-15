@@ -1,0 +1,147 @@
+
+//HEADER 
+.navbar {
+	text-transform: uppercase;
+	padding:0;
+	font-weight:300;
+
+	.navbar-brand { 
+		font-size: 1.25rem;
+	 }
+}
+
+.btn-header {
+	font-size: .85em;
+	font-weight:300;
+}
+
+
+
+
+#navbarNavDropdown {
+	.navbar-nav {
+		.dropdown-menu {
+			background-color: $gray-lightest;
+			margin-top: .25rem;
+			padding: 0;
+
+			.nav-link {
+				color: $gray-light;
+				padding: $spacer;
+
+				&:hover {
+					background-color: darken( $gray-lightest, 5% );
+				}
+			}
+		}
+
+		.wpmenucartli a,
+		.nav-link {
+			color: $gray-lighter;
+			padding: .75rem 1.25rem;
+			white-space:nowrap;
+			display:block;
+			position: relative;
+			z-index:1;
+
+			&:after,
+			&:before {
+				transition: all .5s;
+			}
+
+			&:after {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				width: 100%;
+				height: 1px;
+				content: '.';
+				color: transparent;
+				background: $gray-400;
+				visibility: none;
+				opacity: 0;
+				z-index: -1;
+
+			}
+
+			&:hover {
+				color: $gray-700;
+				&:after {
+					opacity: 1;
+					visibility: visible;
+					height: 100%;
+				}
+			}
+		}
+	}
+	
+}
+
+//NAV STYLING
+@include media-breakpoint-down(lg) {
+	#navbarNavDropdown {
+		.navbar-nav {
+			.wpmenucartli a,
+			.nav-link {
+				padding: .75rem 1rem;
+			}
+		}
+	}
+}
+
+//NAV STYLING
+@include media-breakpoint-down(md) {
+
+	.navbar {
+		padding: .5rem 1rem;
+	}
+
+	#wrapper-navbar {
+		.container-override { width: 100%; max-width:100%;}
+	}
+
+	#navbarNavDropdown {
+		background-color: $gray-lightest;
+		margin-top: .5rem;
+		margin-bottom: 0;
+		margin-left: -$spacer;
+		margin-right: -$spacer;
+
+		.navbar-nav {
+			.nav-link,
+			.wpmenucartli a {
+				padding: $spacer $spacer;
+				color: $gray;
+				border-bottom: 1px solid $gray-lighter;
+
+				&:hover {
+					background-color: darken( $gray-lightest, 5% );
+				}
+			}
+
+			.dropdown-menu {
+				border:none;
+				float: none;
+				margin-top: 0;
+
+				.nav-link {
+					padding: $spacer $spacer * 2;
+					color: $gray;
+				}
+			}
+
+		}
+		
+	}
+}
+
+.cta-callout {
+	border-top: none;
+	.card-header {
+		border-bottom: none;
+	}
+}
